@@ -1,0 +1,16 @@
+c:\users\rshikkal\documents\visual studio 2017\Projects\SalesRegister\SalesRegister\bin\Debug\SalesRegister.exe.config
+c:\users\rshikkal\documents\visual studio 2017\Projects\SalesRegister\SalesRegister\bin\Debug\SalesRegister.exe
+c:\users\rshikkal\documents\visual studio 2017\Projects\SalesRegister\SalesRegister\bin\Debug\SalesRegister.pdb
+c:\users\rshikkal\documents\visual studio 2017\Projects\SalesRegister\SalesRegister\obj\Debug\SalesRegister.csprojResolveAssemblyReference.cache
+c:\users\rshikkal\documents\visual studio 2017\Projects\SalesRegister\SalesRegister\obj\Debug\App.g.cs
+c:\users\rshikkal\documents\visual studio 2017\Projects\SalesRegister\SalesRegister\obj\Debug\SalesRegister_MarkupCompile.cache
+c:\users\rshikkal\documents\visual studio 2017\Projects\SalesRegister\SalesRegister\obj\Debug\SalesRegister_MarkupCompile.lref
+c:\users\rshikkal\documents\visual studio 2017\Projects\SalesRegister\SalesRegister\obj\Debug\SalesRegister.g.resources
+c:\users\rshikkal\documents\visual studio 2017\Projects\SalesRegister\SalesRegister\obj\Debug\SalesRegister.Properties.Resources.resources
+c:\users\rshikkal\documents\visual studio 2017\Projects\SalesRegister\SalesRegister\obj\Debug\SalesRegister.csproj.GenerateResource.Cache
+c:\users\rshikkal\documents\visual studio 2017\Projects\SalesRegister\SalesRegister\obj\Debug\SalesRegister.exe
+c:\users\rshikkal\documents\visual studio 2017\Projects\SalesRegister\SalesRegister\obj\Debug\SalesRegister.pdb
+C:\Users\rshikkal\documents\visual studio 2017\Projects\SalesRegister\SalesRegister\obj\Debug\Windows\WelcomeWindow.g.cs
+C:\Users\rshikkal\documents\visual studio 2017\Projects\SalesRegister\SalesRegister\obj\Debug\Windows\WelcomeWindow.baml
+C:\Users\rshikkal\documents\visual studio 2017\Projects\SalesRegister\SalesRegister\obj\Debug\Windows\StartWindow.g.cs
+C:\Users\rshikkal\documents\visual studio 2017\Projects\SalesRegister\SalesRegister\obj\Debug\Windows\StartWindow.baml
