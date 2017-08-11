@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +20,15 @@ namespace SalesRegister.Common
             this.time = time;
             dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
         }
+
+        public CommonActions(Window window) {
+            this.currentWindow = window;
+        }
     
+        public CommonActions()
+        {
+
+        }
         public void waitForNextOperation(int seconds) {
             System.Threading.Thread.Sleep(seconds * 1000);
         }
@@ -31,7 +40,7 @@ namespace SalesRegister.Common
             dispatcherTimer.Start();
         }
 
-        private void dispatcherTimer_Tick(object sender, EventArgs e)
+        public void dispatcherTimer_Tick(object sender, EventArgs e)
         {
             try
             {
@@ -42,6 +51,23 @@ namespace SalesRegister.Common
             {
                 Console.WriteLine(exe);
             }
+        }
+
+        public void openNewWindow(Window newWindow) {
+            try {
+                bool isOpen = false;
+                if (!isOpen) {
+                    newWindow.ShowDialog();
+                    isOpen = true;
+                }
+            }
+            catch(Exception exe) {
+                CommonActions.printOnConsole(exe.ToString());
+            }
+        }
+
+        public static void printOnConsole(string message) {
+            Debug.WriteLine(message);
         }
     }
 }

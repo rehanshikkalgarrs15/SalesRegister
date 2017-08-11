@@ -1,5 +1,8 @@
-﻿using System;
+﻿using SalesRegister.Common;
+using SalesRegister.Utils;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +22,25 @@ namespace SalesRegister.Windows
     /// </summary>
     public partial class StartWindow : Window
     {
+        DateUtils dateutils;
+        CommonActions commonActions;
         public StartWindow()
         {
             InitializeComponent();
+            dateutils = new DateUtils(this);
+            commonActions = new CommonActions(this);
+            CommonActions.printOnConsole(dateutils.getCurrentTime().ToString());
+            CommonActions.printOnConsole(dateutils.getTodaysDate().ToString());
+        }
+
+        private void add_item_window(object sender, RoutedEventArgs e)
+        {
+            commonActions.openNewWindow(new AddItemWindow());
+        }
+
+        private void sales_register_window(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

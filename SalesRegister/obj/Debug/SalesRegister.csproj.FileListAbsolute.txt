@@ -14,3 +14,5 @@ C:\Users\rshikkal\documents\visual studio 2017\Projects\SalesRegister\SalesRegis
 C:\Users\rshikkal\documents\visual studio 2017\Projects\SalesRegister\SalesRegister\obj\Debug\Windows\WelcomeWindow.baml
 C:\Users\rshikkal\documents\visual studio 2017\Projects\SalesRegister\SalesRegister\obj\Debug\Windows\StartWindow.g.cs
 C:\Users\rshikkal\documents\visual studio 2017\Projects\SalesRegister\SalesRegister\obj\Debug\Windows\StartWindow.baml
+C:\Users\rshikkal\documents\visual studio 2017\Projects\SalesRegister\SalesRegister\obj\Debug\Windows\AddItemWindow.g.cs
+C:\Users\rshikkal\documents\visual studio 2017\Projects\SalesRegister\SalesRegister\obj\Debug\Windows\AddItemWindow.baml

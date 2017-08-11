@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:SalesRegister"
         mc:Ignorable="d"
         Title="SALES REGISTER" Height="300" Width="525" WindowState="Maximized">
-    <Grid>
-        <TextBox Text="TITLE" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" />
-    </Grid>
+    <StackPanel HorizontalAlignment="Center"  VerticalAlignment="Center">
+      
+        <Label Content="IB"  FontSize="30" FontFamily="times new roman"/>
+        <Label Content="Ankalgi"  FontSize="10" FontFamily="times new roman" />
+    </StackPanel>
 </Window>

@@ -6,7 +6,13 @@
         xmlns:local="clr-namespace:SalesRegister.Windows"
         mc:Ignorable="d"
         Title="StartWindow" Height="300" Width="300" WindowState="Maximized">
-    <Grid>
-        
-    </Grid>
+
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel Orientation="Vertical">
+            <Button Margin="10" BorderBrush="Gray" FontSize="15" Click="add_item_window">Add Item</Button>
+            <Button Margin="10"  BorderBrush="Gray" FontSize="15" Click="sales_register_window">Sales Register</Button>
+            <Button Margin="10" BorderBrush="Gray"  FontSize="15">Add Item</Button>
+        </StackPanel> 
+
+    </StackPanel>
 </Window>
