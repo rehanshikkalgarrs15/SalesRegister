@@ -1,4 +1,5 @@
-﻿using SalesRegister.Utils;
+﻿using SalesRegister.DB;
+using SalesRegister.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,15 +22,21 @@ namespace SalesRegister.Windows
     public partial class AddItemWindow : Window
     {
         DialogUtils dialogUtils;
+        DBConnection dbconnection;
+
         public AddItemWindow()
         {
             InitializeComponent();
             dialogUtils = new DialogUtils(this);
+            dbconnection = new DBConnection();
         }
 
         private void addItemToDatabase(object sender, RoutedEventArgs e)
         {
-            dialogUtils.showConfirmationDialog("Items", "Items Added Successfuly");
+            if (dbconnection.openConnection()){
+                dialogUtils.showConfirmationDialog("Items", "Items Added Successfuly");
+
+            }
         }
     }
 }
