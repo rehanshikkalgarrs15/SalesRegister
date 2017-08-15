@@ -5,11 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SalesRegister.Windows"
         mc:Ignorable="d"
-        Title="AddItemWindow" Height="300" Width="300">
+        Title="AddItemWindow" Height="400" Width="400">
     <Grid>
-        <Label Content="ADD ITEM" HorizontalAlignment="Left" Margin="122,36,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="33,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
-        <Button Content="ADD!" HorizontalAlignment="Left" Margin="33,161,0,0" VerticalAlignment="Top" Width="75" Click="addItemToDatabase"/>
-
+        <Label Content="ADD ITEM" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="0 15 0 0" FontSize="20"/>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <TextBox  Height="23" TextWrapping="Wrap"  Width="120" Margin="10" Name="item_name"/>
+            <Button Content="ADD!"  Width="75" Click="addItemToDatabase"/>
+        </StackPanel>
+        <ListView HorizontalAlignment="Right" Height="100" VerticalAlignment="Center" Width="100" Name="added_item">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Added Items" HorizontalAlignment="Right" Margin="305,105,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

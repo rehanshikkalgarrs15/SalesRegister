@@ -26,7 +26,7 @@ namespace SalesRegister
         public MainWindow()
         {
             InitializeComponent();
-            commonActions = new CommonActions(this, new StartWindow(),5);
+            commonActions = new CommonActions(this, new StartWindow(),1);
             commonActions.waitAndNavigateToAnotherWindow();
         }
 

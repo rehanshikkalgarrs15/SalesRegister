@@ -1,6 +1,11 @@
 ﻿using MySql.Data.MySqlClient;
+using SalesRegister.Common;
+using SalesRegister.Models;
+using SalesRegister.Utils;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -56,7 +61,7 @@ namespace SalesRegister.DB
         }
 
         //Close connection
-        private bool closeConnection(){
+        public bool closeConnection(){
             try{
                 connection.Close();
                 return true;
@@ -66,5 +71,63 @@ namespace SalesRegister.DB
                 return false;
             }
         }
+
+        public string getConnectionString() {
+            string connectionString = ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString.ToString();
+            return connectionString;
+        }
+
+
+        public List<Item> getAddedItems(string SPName)
+        {
+            List<Item> items = new List<Item>();
+            string connectionString = getConnectionString();
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                using (MySqlCommand command = new MySqlCommand(SPName, connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    connection.Open();
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Item item = new Item(reader.GetValue(0).ToString());
+                            items.Add(item);
+                        }
+                    }
+                    command.Connection.Close();
+                }
+            }
+            return items;
+        }
+
+        public int addItem(string itemName, string SPName)
+        {
+            int success = 1, failed = 0;
+            try
+            {
+                string connectionString = getConnectionString();
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    using (MySqlCommand command = new MySqlCommand(SPName, connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.Add(new MySqlParameter("itemname", itemName));
+                        connection.Open();
+                        command.ExecuteNonQuery();
+
+                        command.Connection.Close();
+                    }
+                }
+                return success;
+            }
+            catch(Exception exe)
+            {
+                CommonActions.printOnConsole(exe.ToString());
+                return failed;
+            }
+        }
+
     }
 }

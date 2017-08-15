@@ -38,6 +38,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -75,6 +76,7 @@
     </Compile>
     <Compile Include="Common\CommonActions.cs" />
     <Compile Include="DB\DBConnection.cs" />
+    <Compile Include="Models\Item.cs" />
     <Compile Include="Models\Party.cs" />
     <Compile Include="Utils\DateUtils.cs" />
     <Compile Include="Utils\DialogUtils.cs" />
@@ -114,10 +116,13 @@
     <None Include="Readme.md" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controller\" />
+    <Folder Include="DB\SP\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

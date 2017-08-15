@@ -69,5 +69,10 @@ namespace SalesRegister.Common
         public static void printOnConsole(string message) {
             Debug.WriteLine(message);
         }
+
+        public bool isEmptyString(string value)
+        {
+            return string.IsNullOrEmpty(value);
+        }
     }
 }
