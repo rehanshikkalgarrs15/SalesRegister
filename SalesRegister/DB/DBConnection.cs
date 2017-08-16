@@ -129,5 +129,43 @@ namespace SalesRegister.DB
             }
         }
 
+        public int addItemToSalesRegister(string date, string billno, string partyname, string itemname,
+                                            string bags, string rate, string amount, string gst,
+                                            string sgst, string cgst, string total, string SPName)
+        {
+            int rowsEffected = 0;
+            try
+            {
+                string connectionString = getConnectionString();
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    using (MySqlCommand command = new MySqlCommand(SPName, connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.Add(new MySqlParameter("todaydate", date));
+                        command.Parameters.Add(new MySqlParameter("billno", billno));
+                        command.Parameters.Add(new MySqlParameter("partyname", partyname));
+                        command.Parameters.Add(new MySqlParameter("item", itemname));
+                        command.Parameters.Add(new MySqlParameter("bags", bags));
+                        command.Parameters.Add(new MySqlParameter("rate", rate));
+                        command.Parameters.Add(new MySqlParameter("amount", amount));
+                        command.Parameters.Add(new MySqlParameter("gst", gst));
+                        command.Parameters.Add(new MySqlParameter("sgst", sgst));
+                        command.Parameters.Add(new MySqlParameter("cgst", cgst));
+                        command.Parameters.Add(new MySqlParameter("total", total));
+                        connection.Open();
+                        rowsEffected = command.ExecuteNonQuery();
+                        command.Connection.Close();
+                    }
+                }
+                return rowsEffected;
+            }
+            catch (Exception exe)
+            {
+                CommonActions.printOnConsole(exe.ToString());
+                return rowsEffected;
+            }
+        }
+
     }
 }

@@ -40,7 +40,8 @@ namespace SalesRegister.Windows
 
         private void sales_register_window(object sender, RoutedEventArgs e)
         {
-
+            commonActions.openNewWindow(new SalesRegisterWindow());
+            this.Close();
         }
     }
 }

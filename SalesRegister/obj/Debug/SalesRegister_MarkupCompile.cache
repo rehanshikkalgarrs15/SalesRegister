@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\rshikkal\documents\visual studio 2017\Projects\SalesRegister\SalesRegister\App.xaml
-3977873566
+41282632354
 
-13-175481690
+151266745783
 151405870595
-Windows\AddItemWindow.xaml;Windows\StartWindow.xaml;Windows\WelcomeWindow.xaml;
+Windows\AddItemWindow.xaml;Windows\SalesRegisterWindow.xaml;Windows\StartWindow.xaml;Windows\WelcomeWindow.xaml;
 
 False
 

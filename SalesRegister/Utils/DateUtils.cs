@@ -18,6 +18,10 @@ namespace SalesRegister.Utils
             dateTime = DateTime.Now;
         }
 
+        public DateUtils()
+        {
+            dateTime = DateTime.Now;
+        }
         public string getTodaysDate()
         {
             string date = dateTime.Date.ToString("dd/M/yyyy");

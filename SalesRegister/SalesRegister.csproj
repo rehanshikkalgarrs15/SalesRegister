@@ -62,6 +62,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\SalesRegisterWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\StartWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -78,10 +82,14 @@
     <Compile Include="DB\DBConnection.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\Party.cs" />
+    <Compile Include="Models\SalesRegister.cs" />
     <Compile Include="Utils\DateUtils.cs" />
     <Compile Include="Utils\DialogUtils.cs" />
     <Compile Include="Windows\AddItemWindow.xaml.cs">
       <DependentUpon>AddItemWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SalesRegisterWindow.xaml.cs">
+      <DependentUpon>SalesRegisterWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\StartWindow.xaml.cs">
       <DependentUpon>StartWindow.xaml</DependentUpon>
@@ -109,6 +117,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -123,6 +132,14 @@
   <ItemGroup>
     <Folder Include="Controller\" />
     <Folder Include="DB\SP\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\RecordConstructorGenerator.3.3.0\tools\analyzers\C#\RecordConstructorGenerator.dll" />
+    <Analyzer Include="..\packages\RecordConstructorGenerator.3.3.0\tools\analyzers\C#\System.Composition.AttributedModel.dll" />
+    <Analyzer Include="..\packages\RecordConstructorGenerator.3.3.0\tools\analyzers\C#\System.Composition.Convention.dll" />
+    <Analyzer Include="..\packages\RecordConstructorGenerator.3.3.0\tools\analyzers\C#\System.Composition.Hosting.dll" />
+    <Analyzer Include="..\packages\RecordConstructorGenerator.3.3.0\tools\analyzers\C#\System.Composition.Runtime.dll" />
+    <Analyzer Include="..\packages\RecordConstructorGenerator.3.3.0\tools\analyzers\C#\System.Composition.TypedParts.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

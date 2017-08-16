@@ -18,3 +18,5 @@ C:\Users\rshikkal\documents\visual studio 2017\Projects\SalesRegister\SalesRegis
 C:\Users\rshikkal\documents\visual studio 2017\Projects\SalesRegister\SalesRegister\obj\Debug\Windows\AddItemWindow.baml
 C:\Users\rshikkal\documents\visual studio 2017\Projects\SalesRegister\SalesRegister\bin\Debug\MySql.Data.dll
 C:\Users\rshikkal\documents\visual studio 2017\Projects\SalesRegister\SalesRegister\bin\Debug\MySql.Data.xml
+C:\Users\rshikkal\documents\visual studio 2017\Projects\SalesRegister\SalesRegister\obj\Debug\Windows\SalesRegisterWindow.g.cs
+C:\Users\rshikkal\documents\visual studio 2017\Projects\SalesRegister\SalesRegister\obj\Debug\Windows\SalesRegisterWindow.baml
