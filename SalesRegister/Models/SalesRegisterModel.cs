@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SalesRegister.Models {
-    class SalesRegister {
-        string billno, partyname, item, bags, rate, amount, gst, sgst, cgst, total;
+     class SalesRegisterModel {
+        public string billno, partyname, item, bags, rate, amount, gst, sgst, cgst, total;
 
-        public SalesRegister(string billno, string partyname, string item, string bags, string rate, string amount, string gst, string sgst, string cgst, string total)
+        public SalesRegisterModel(string billno, string partyname, string item, string bags, string rate, string amount, string gst, string sgst, string cgst, string total)
         {
             this.billno = billno;
             this.partyname = partyname;
@@ -20,7 +20,10 @@ namespace SalesRegister.Models {
             this.sgst = sgst;
             this.cgst = cgst;
             this.total = total;
+            getSalesRegisterItem();
         }
+
+
 
         public string BillNo
         {
@@ -82,6 +85,21 @@ namespace SalesRegister.Models {
             set => total = value;
         }
 
+        public List<string> getSalesRegisterItem()
+        {
+            List<string> salesItem = new List<string>();
+            salesItem.Add(billno);
+            salesItem.Add(partyname);
+            salesItem.Add(item);
+            salesItem.Add(bags);
+            salesItem.Add(rate);
+            salesItem.Add(amount);
+            salesItem.Add(gst);
+            salesItem.Add(sgst);
+            salesItem.Add(cgst);
+            salesItem.Add(total);
+            return salesItem;
+        }
 
     }
 }

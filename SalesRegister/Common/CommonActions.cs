@@ -4,7 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows; 
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace SalesRegister.Common
 {
@@ -73,6 +75,21 @@ namespace SalesRegister.Common
         public bool isEmptyString(string value)
         {
             return string.IsNullOrEmpty(value);
+        }
+
+        public static void clearTextBox(Visual myWindow)
+        {
+            int childrenCount = VisualTreeHelper.GetChildrenCount(myWindow);
+            for (int i = 0; i < childrenCount; i++)
+            {
+                var visualChild = (Visual)VisualTreeHelper.GetChild(myWindow, i);
+                if (visualChild is TextBox)
+                {
+                    TextBox tb = (TextBox)visualChild;
+                    tb.Clear();
+                }
+                clearTextBox(visualChild);
+            }
         }
     }
 }

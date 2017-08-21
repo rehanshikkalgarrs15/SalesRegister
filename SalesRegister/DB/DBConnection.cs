@@ -60,6 +60,29 @@ namespace SalesRegister.DB
             }
         }
 
+        internal int generateBillNo(string SPName)
+        {
+            int billno = 0;
+            string connectionString = getConnectionString();
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                using (MySqlCommand command = new MySqlCommand(SPName, connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    connection.Open();
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            billno = Convert.ToInt16(reader.GetValue(0));
+                        }
+                    }
+                    command.Connection.Close();
+                }
+            }
+            return billno;
+        }
+
         //Close connection
         public bool closeConnection(){
             try{

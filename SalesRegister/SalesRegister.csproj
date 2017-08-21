@@ -82,7 +82,7 @@
     <Compile Include="DB\DBConnection.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\Party.cs" />
-    <Compile Include="Models\SalesRegister.cs" />
+    <Compile Include="Models\SalesRegisterModel.cs" />
     <Compile Include="Utils\DateUtils.cs" />
     <Compile Include="Utils\DialogUtils.cs" />
     <Compile Include="Windows\AddItemWindow.xaml.cs">
